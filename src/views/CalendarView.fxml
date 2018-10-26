@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="borderPane" prefHeight="324.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CalendarViewController">
+   <bottom>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+              <VBox layoutY="30.0" prefHeight="322.0" prefWidth="600.0" spacing="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+                  <children>
+                      <MenuBar fx:id="menuBar" prefHeight="31.0" prefWidth="600.0">
+                          <menus>
+                              <Menu mnemonicParsing="false" text="File">
+                                  <items>
+                                      <MenuItem mnemonicParsing="false" text="Close" />
+                              <MenuItem fx:id="modifyAccountMenu" mnemonicParsing="false" onAction="#goToModifyAccountScene" text="Modify Account" />
+                                  </items>
+                              </Menu>
+                              <Menu mnemonicParsing="false" text="Edit">
+                                  <items>
+                                      <MenuItem mnemonicParsing="false" text="Delete" />
+                                  </items>
+                              </Menu>
+                              <Menu mnemonicParsing="false" text="Help">
+                                  <items>
+                                      <MenuItem mnemonicParsing="false" text="About" />
+                                  </items>
+                              </Menu>
+                          </menus>
+                      </MenuBar>
+                  <HBox prefHeight="28.0" prefWidth="600.0" spacing="60.0">
+                     <children>
+                        <ComboBox fx:id="monthDropDown" prefWidth="150.0" promptText="Select Month" />
+                        <Label fx:id="month" prefHeight="17.0" prefWidth="92.0" text="Month" />
+                        <Label fx:id="year" prefHeight="17.0" prefWidth="68.0" text="Year" />
+                        <ComboBox fx:id="yearDropDown" prefWidth="150.0" promptText="Select Year" />
+                     </children>
+                  </HBox>
+                      <GridPane fx:id="calendarGrid" gridLinesVisible="true" prefHeight="228.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+                          <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                          <children>
+                              <Label text="Sun" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                                  <padding>
+                                      <Insets left="33.0" />
+                                  </padding>
+                              </Label>
+                              <Label text="Mon" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                                  <padding>
+                                      <Insets left="33.0" />
+                                  </padding>
+                              </Label>
+                              <Label text="Tue" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                                  <padding>
+                                      <Insets left="33.0" />
+                                  </padding>
+                              </Label>
+                              <Label text="Wed" GridPane.columnIndex="3" GridPane.rowIndex="0">
+                                  <padding>
+                                      <Insets left="33.0" />
+                                  </padding>
+                              </Label>
+                              <Label text="Thu" GridPane.columnIndex="4" GridPane.rowIndex="0">
+                                  <padding>
+                                      <Insets left="33.0" />
+                                  </padding>
+                              </Label>
+                              <Label text="Fri" GridPane.columnIndex="5" GridPane.rowIndex="0">
+                                  <padding>
+                                      <Insets left="33.0" />
+                                  </padding>
+                              </Label>
+                              <Label text="Sat" GridPane.columnIndex="6" GridPane.rowIndex="0">
+                                  <padding>
+                                      <Insets left="33.0" />
+                                  </padding>
+                              </Label>
+                              <Label text="" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                                  <padding>
+                                      <Insets left="38.0" />
+                                  </padding>
+                              </Label>
+                              <Label text="" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                  <padding>
+                                      <Insets left="38.0" />
+                                  </padding>
+                              </Label>
+                              <Label text="" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                  <padding>
+                                      <Insets left="38.0" />
+                                  </padding>
+                              </Label>
+                              <Label text="" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                  <padding>
+                                      <Insets left="38.0" />
+                                  </padding>
+                              </Label>
+                              <Label text="" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                                  <padding>
+                                      <Insets left="38.0" />
+                                  </padding>
+                              </Label>
+                              <Label text="" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                                  <padding>
+                                      <Insets left="38.0" />
+                                  </padding>
+                              </Label>
+                              <Label text="" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                                  <padding>
+                                      <Insets left="38.0" />
+                                  </padding>
+                              </Label>
+                              <Label text="" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                                  <padding>
+                                      <Insets left="38.0" />
+                                  </padding>
+                        </Label>
+                              <Label text="" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                  <padding>
+                                      <Insets left="38.0" />
+                                  </padding>
+                        </Label>
+                              <Label text="" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                  <padding>
+                                      <Insets left="38.0" />
+                                  </padding>
+                        </Label>
+                              <Label text="" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                  <padding>
+                                      <Insets left="38.0" />
+                                  </padding>
+                        </Label>
+                              <Label text="" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                                  <padding>
+                                      <Insets left="38.0" />
+                                  </padding>
+                        </Label>
+                              <Label text="" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                                  <padding>
+                                      <Insets left="38.0" />
+                                  </padding>
+                        </Label>
+                              <Label text="" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                                  <padding>
+                                      <Insets left="38.0" />
+                                  </padding>
+                        </Label>
+      
+      
+            
+                              <Label text="" GridPane.columnIndex="0" GridPane.rowIndex="3">
+                                  <padding>
+                                      <Insets left="38.0" />
+                                  </padding>
+                        </Label>
+                              <Label text="" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                  <padding>
+                                      <Insets left="38.0" />
+                                  </padding>
+                        </Label>
+                              <Label text="" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                  <padding>
+                                      <Insets left="38.0" />
+                                  </padding>
+                        </Label>
+                              <Label text="" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                  <padding>
+                                      <Insets left="38.0" />
+                                  </padding>
+                        </Label>
+                              <Label text="" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                                  <padding>
+                                      <Insets left="38.0" />
+                                  </padding>
+                        </Label>
+                              <Label text="" GridPane.columnIndex="5" GridPane.rowIndex="3">
+                                  <padding>
+                                      <Insets left="38.0" />
+                                  </padding>
+                        </Label>
+                              <Label text="" GridPane.columnIndex="6" GridPane.rowIndex="3">
+                                  <padding>
+                                      <Insets left="38.0" />
+                                  </padding>
+                        </Label>
+                              <Label text="" GridPane.columnIndex="0" GridPane.rowIndex="4">
+                                  <padding>
+                                      <Insets left="38.0" />
+                                  </padding>
+                        </Label>
+                              <Label text="" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                  <padding>
+                                      <Insets left="38.0" />
+                                  </padding>
+                        </Label>
+                              <Label text="" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                  <padding>
+                                      <Insets left="38.0" />
+                                  </padding>
+                        </Label>
+                              <Label text="" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                                  <padding>
+                                      <Insets left="38.0" />
+                                  </padding>
+                        </Label>
+                              <Label text="" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                                  <padding>
+                                      <Insets left="38.0" />
+                                  </padding>
+                        </Label>
+                              <Label text="" GridPane.columnIndex="5" GridPane.rowIndex="4">
+                                  <padding>
+                                      <Insets left="38.0" />
+                                  </padding>
+                        </Label>
+                              <Label text="" GridPane.columnIndex="6" GridPane.rowIndex="4">
+                                  <padding>
+                                      <Insets left="38.0" />
+                                  </padding>
+                        </Label>
+                              <Label text="" GridPane.columnIndex="0" GridPane.rowIndex="5">
+                                  <padding>
+                                      <Insets left="38.0" />
+                                  </padding>
+                        </Label>
+                              <Label text="" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                  <padding>
+                                      <Insets left="38.0" />
+                                  </padding>
+                        </Label>
+                              <Label text="" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                  <padding>
+                                      <Insets left="38.0" />
+                                  </padding>
+                        </Label>
+                              <Label text="" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                                  <padding>
+                                      <Insets left="38.0" />
+                                  </padding>
+                        </Label>
+                              <Label text="" GridPane.columnIndex="4" GridPane.rowIndex="5">
+                                  <padding>
+                                      <Insets left="38.0" />
+                                  </padding>
+                        </Label>
+                              <Label text="" GridPane.columnIndex="5" GridPane.rowIndex="5">
+                                  <padding>
+                                      <Insets left="38.0" />
+                                  </padding>
+                        </Label>
+                              <Label text="" GridPane.columnIndex="6" GridPane.rowIndex="5">
+                                  <padding>
+                                      <Insets left="38.0" />
+                                  </padding>
+                        </Label>
+                          </children>
+                      </GridPane>
+                  </children>
+              </VBox>
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>
