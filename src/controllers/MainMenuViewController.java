@@ -30,8 +30,8 @@ public class MainMenuViewController {
     private Label passLabel;
 
     public void createAccount(ActionEvent event) throws java.io.IOException {
-        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(FXMLLoader.load(getClass().getResource("/views/AccountCreationView.fxml")));
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(FXMLLoader.load(getClass().getResource("AccountCreationView.fxml")));
         window.setScene(scene);
         window.setTitle("Calendar App - Create Account");
     }

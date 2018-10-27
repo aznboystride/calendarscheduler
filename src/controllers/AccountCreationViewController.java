@@ -64,7 +64,7 @@ public class AccountCreationViewController {
             stage.setScene(scene);
         }
     }
-    
+
     private boolean checkEmptyField() {
         if(firstnameField.getText().length() == 0)
             return false;
