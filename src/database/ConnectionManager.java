@@ -28,7 +28,7 @@ public class ConnectionManager {
         try
         {
             Class.forName(DRIVER);
-            connection = DriverManager.getConnection(URL, "root", "s6flipto");
+            connection = DriverManager.getConnection(URL, "root", "12345");
         }
         catch(ClassNotFoundException e)
         {
