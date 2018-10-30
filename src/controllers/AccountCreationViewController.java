@@ -1,19 +1,23 @@
+
 package controllers;
 
+import database.UserAccountManager;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import models.UserAccount;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import database.UserAccountManager;
+import models.UserAccount;
+import models.alerts.AlertBox;
+
 import java.io.IOException;
 import java.sql.Date;
-import models.alerts.AlertBox;
+
 
 public class AccountCreationViewController {
 
@@ -64,7 +68,7 @@ public class AccountCreationViewController {
             stage.setScene(scene);
         }
     }
-
+    
     private boolean checkEmptyField() {
         if(firstnameField.getText().length() == 0)
             return false;

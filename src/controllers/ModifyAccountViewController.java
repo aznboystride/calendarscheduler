@@ -3,12 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package controllers;
+
 
 import database.UserAccountManager;
 import javafx.event.ActionEvent;
-import models.UserAccount;
-import models.alerts.AlertBox;
+
+
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
@@ -20,6 +22,8 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import models.UserAccount;
+import models.alerts.AlertBox;
 
 import java.io.IOException;
 import java.net.URL;

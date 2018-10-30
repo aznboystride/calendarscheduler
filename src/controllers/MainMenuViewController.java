@@ -1,3 +1,4 @@
+
 package controllers;
 
 import database.UserAccountManager;
@@ -12,6 +13,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import models.UserAccount;
+
 
 public class MainMenuViewController {
 
@@ -30,8 +32,8 @@ public class MainMenuViewController {
     private Label passLabel;
 
     public void createAccount(ActionEvent event) throws java.io.IOException {
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(FXMLLoader.load(getClass().getResource("AccountCreationView.fxml")));
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(FXMLLoader.load(getClass().getResource("/views/AccountCreationView.fxml")));
         window.setScene(scene);
         window.setTitle("Calendar App - Create Account");
     }

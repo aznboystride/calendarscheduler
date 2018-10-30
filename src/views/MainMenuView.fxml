@@ -40,7 +40,7 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <Button fx:id="createAccountBtn" layoutX="215.0" layoutY="293.0" mnemonicParsing="false" onAction="#createAccount" prefHeight="27.0" prefWidth="167.0" text="Create Account" />
+            <Button layoutX="215.0" layoutY="293.0" mnemonicParsing="false" onAction="#createAccount" prefHeight="27.0" prefWidth="167.0" text="Create Account" />
             <Button layoutX="215.0" layoutY="249.0" mnemonicParsing="false" onAction="#login" prefHeight="27.0" prefWidth="167.0" text="Login" />
             <TextField fx:id="username" layoutX="217.0" layoutY="159.0" promptText="username" />
             <PasswordField fx:id="password" layoutX="217.0" layoutY="201.0" promptText="password" />

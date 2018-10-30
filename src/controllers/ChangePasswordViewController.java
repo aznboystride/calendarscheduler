@@ -1,3 +1,5 @@
+
+
 package controllers;
 
 import database.UserAccountManager;
@@ -11,6 +13,8 @@ import javafx.scene.control.PasswordField;
 import javafx.stage.Stage;
 import models.UserAccount;
 import models.alerts.AlertBox;
+
+
 import java.io.IOException;
 import java.sql.SQLException;
 
